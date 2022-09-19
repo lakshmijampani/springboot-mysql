@@ -3,11 +3,12 @@ spring:
     url: jdbc:mysql://mysqlserver901.mysql.database.azure.com:3306/{mysqldb}?useSSL=true&requireSSL=false
     username: mysqldb
     password: mysql@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-      dialect : org.hibernate.dialect.SQLServer2012Dialect
+    properties.hibernate.dialect : org.hibernate.dialect.MySQL8Dialect
 
 server:
   port: 9090
